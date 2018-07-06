@@ -42,5 +42,8 @@ describe('Scrabble Score', function() {
     it('Should return 9.', function(){
       assert.equal(app.scrabble_score('Many'), 9);
     });
+    it('Should return 7.', function(){
+      assert.equal(app.scrabble_score('Peter'), 7);
+    });
   });
 });
