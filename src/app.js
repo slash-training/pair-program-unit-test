@@ -27,7 +27,23 @@ function scrabble_score(str){
     return score(str);
 }
 
+function vowel_count(str){
+    // English Vowel: A, E, I, O, U,
+    const scores = {
+        'A': 1, 'E': 1, 'I': 1, 'O': 1, 'U': 1,
+    }
+      
+    const add = (a, b) => a + b;
+    const value = (letter) => scores[letter]
+    
+    const score = (word) =>
+    word ? word.toUpperCase().split('').map(value).reduce(add) : 0
+
+    return score(str);
+}
+
 module.exports = {
     number_to_ordinal, 
-    scrabble_score
+    scrabble_score,
+    vowel_count
 }

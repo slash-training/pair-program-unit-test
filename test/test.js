@@ -1,7 +1,6 @@
 var assert = require('assert');
 var app = require('../src/app');
 
-
 describe('Number to Ordinal', function() {
   describe('Test Cases', function() {
     it('Should return 2nd.', function(){
@@ -44,6 +43,23 @@ describe('Scrabble Score', function() {
     });
     it('Should return 7.', function(){
       assert.equal(app.scrabble_score('Peter'), 7);
+    });
+  });
+});
+
+describe('Vowel Count', function() {
+  describe('Test Cases', function() {
+    it('Should return 3.', function(){
+      assert.equal(app.vowel_count('Cabbage'), 3);
+    });
+    it('Should return 1.', function(){
+      assert.equal(app.vowel_count('Car'), 1);
+    });
+    it('Should return 2.', function(){
+      assert.equal(app.vowel_count('Peter'), 2);
+    });
+    it('Should return 22.', function(){
+      assert.equal(app.vowel_count('I go to school with my friends every day, we are undergraduate students.'), 22);
     });
   });
 });
