@@ -42,8 +42,13 @@ function vowel_count(str){
     return score(str);
 }
 
+function bicycle_race(distance, speed_1, speed_2){
+    return (distance / (speed_1 + speed_2);
+}
+
 module.exports = {
     number_to_ordinal, 
     scrabble_score,
-    vowel_count
+    vowel_count,
+    bicycle_race
 }

@@ -63,3 +63,23 @@ describe('Vowel Count', function() {
     });
   });
 });
+
+describe('Bicycle Race', function() {
+  describe('Test Cases', function() {
+    it('Should return 5.', function(){
+      assert.equal(app.bicycle_race(10, 1, 1), 5);
+    });
+    it('Should return 3.', function(){
+      assert.equal(app.bicycle_race(9, 1, 2), 3);
+    });
+    it('Should return 6.6667.', function(){
+      assert.equal(app.bicycle_race(20, 1, 2), 6.6667);
+    });
+    it('Should return 0.8.', function(){
+      assert.equal(app.bicycle_race(20, 20, 5), 0.8);
+    });
+    it('Should return 0.0133.', function(){
+      assert.equal(app.bicycle_race(20, 700, 800), 0.0133);
+    });
+  });
+});
